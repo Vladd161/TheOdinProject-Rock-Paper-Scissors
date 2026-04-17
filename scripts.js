@@ -54,7 +54,6 @@ function playGame(){
     let win = false;
     for(i = 0; i < 5; i++){
         win = playRound(getHumanChoice(), getComputerChoice());
-        console.log(win);
         if(win === true){
             humanScore += 1;
         }else if(win === false){
@@ -64,6 +63,13 @@ function playGame(){
 
     console.log(`Your Score: ${humanScore}`)
     console.log(`Computa Score: ${computerScore}`)
+    if(humanScore > computerScore){
+        console.log("YOUR THE BEST! YOU WON YOU BEAT THE COMPUTER POG!!!")
+    }else if(computerScore < humanScore){
+        console.log("...You lost against a computer")
+    }else{
+        console.log("IIIIIITS A TIE!")
+    }
 }
 
 playGame();
